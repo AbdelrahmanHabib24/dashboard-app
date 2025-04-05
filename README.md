@@ -1,10 +1,10 @@
- 🔥 React + Next.js Dashboard
+# 🔥 React + Next.js Dashboard
 
-A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind CSS**, and **Redux Toolkit**. It includes **Firebase authentication**, a dynamic **user table**, and **chart visualization** using **Recharts**. The dashboard is optimized for mobile and desktop views and supports dark mode.
+A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind CSS**, and **Redux Toolkit**. It includes **Firebase authentication**, a dynamic **user table**, and **chart visualization** using **Recharts**. The dashboard is optimized for both mobile and desktop views, and supports dark mode.
 
+---
 
-
-📦 Tech Stack
+## 📦 Tech Stack
 
 - **Next.js 15 (App Router)**
 - **React 18**
@@ -14,9 +14,9 @@ A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind C
 - **Firebase (Auth + Firestore)**
 - **Recharts**
 
+---
 
-
- ✨ Features
+## ✨ Features
 
 - 🔐 Firebase Authentication (Login / Logout)  
 - 🔒 Protected Routes  
@@ -29,8 +29,9 @@ A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind C
 - 📱 Fully Responsive Design  
 - 🧩 Modular and Clean Code Structure  
 
+---
 
- 🧠 Implementation Overview
+## 🧠 Implementation Overview
 
 - **Firebase** is used for authenticating users and retrieving user data.
 - **Redux Toolkit** manages global state including sort, filter, and pagination logic.
@@ -38,5 +39,17 @@ A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind C
 - **Tailwind CSS** ensures a modern, responsive UI.
 - **Dark Mode** is handled via a custom `ThemeContext`, with preference saved in `localStorage`.
 
+---
 
+## 🚀 Getting Started
 
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
