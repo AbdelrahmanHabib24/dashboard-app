@@ -1,4 +1,4 @@
-# 🔥 React + Next.js Admin Dashboard
+# 🔥 React + Next.js Dashboard
 
 This is a **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind CSS**, and **Redux Toolkit**, featuring **Firebase authentication**, a dynamic **user data table**, and a **chart visualization** using **Recharts**. Designed for both desktop and mobile screens, with light/dark theme support.
 
