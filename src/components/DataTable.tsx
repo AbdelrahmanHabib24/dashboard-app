@@ -13,15 +13,8 @@ import LoadingSpinner from "./LoadingSpinner";
 
 export default function DataTable() {
   const dispatch = useDispatch<AppDispatch>();
-  const {
-    filteredData,
-    currentPage,
-    pageItems,
-    sort,
-    filter,
-    loading,
-    error,
-  } = useSelector((state: RootState) => state.table);
+  const { filteredData, currentPage, pageItems, sort, filter, loading, error } =
+    useSelector((state: RootState) => state.table);
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -42,9 +35,14 @@ export default function DataTable() {
   };
 
   if (loading) return <LoadingSpinner />;
-  if (error) return <div className="text-center text-red-500">Error: {error}</div>;
+  if (error)
+    return <div className="text-center text-red-500">Error: {error}</div>;
   if (filteredData.length === 0)
-    return <div className="text-center text-gray-700 dark:text-gray-300">No data to display.</div>;
+    return (
+      <div className="text-center text-gray-700 dark:text-gray-300">
+        No data to display.
+      </div>
+    );
 
   return (
     <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
@@ -59,19 +57,52 @@ export default function DataTable() {
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[600px] text-sm text-center text-gray-900 dark:text-gray-100">
+        <table
+          data-aos="fade-up"
+          className="w-full min-w-[600px] text-sm text-center text-gray-900 dark:text-gray-100"
+        >
           <thead>
             <tr className="bg-gray-200 dark:bg-gray-700">
-              <th className="p-2 cursor-pointer" onClick={() => handleSort("id")}>ID</th>
-              <th className="p-2 cursor-pointer" onClick={() => handleSort("name")}>Name</th>
-              <th className="p-2 cursor-pointer" onClick={() => handleSort("email")}>Email</th>
-              <th className="p-2 cursor-pointer" onClick={() => handleSort("role")}>Role</th>
-              <th className="p-2 cursor-pointer" onClick={() => handleSort("activity")}>Activity</th>
+              <th
+                className="p-2 cursor-pointer"
+                onClick={() => handleSort("id")}
+              >
+                ID
+              </th>
+              <th
+                className="p-2 cursor-pointer"
+                onClick={() => handleSort("name")}
+              >
+                Name
+              </th>
+              <th
+                className="p-2 cursor-pointer"
+                onClick={() => handleSort("email")}
+              >
+                Email
+              </th>
+              <th
+                className="p-2 cursor-pointer"
+                onClick={() => handleSort("role")}
+              >
+                Role
+              </th>
+              <th
+                className="p-2 cursor-pointer"
+                onClick={() => handleSort("activity")}
+              >
+                Activity
+              </th>
             </tr>
           </thead>
           <tbody>
-            {currentData.map((user) => (
-              <tr key={user.id} className="border-b dark:border-gray-700">
+            {currentData.map((user, index) => (
+              <tr
+                key={user.id}
+                className="border-b dark:border-gray-700"
+                data-aos="slide-right"
+                data-aos-delay={index * 400} 
+              >
                 <td className="p-2">{user.id}</td>
                 <td className="p-2">{user.name}</td>
                 <td className="p-2">{user.email}</td>

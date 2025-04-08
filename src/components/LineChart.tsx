@@ -18,7 +18,8 @@ interface LineChartProps {
 
 export default function LineChart({ data }: LineChartProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow transition-colors">
+    <div   data-aos="fade-up"
+    className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow transition-colors">
       <h2 className="text-lg font-bold mb-4 text-gray-900 dark:text-white ">
         Monthly Activity
       </h2>

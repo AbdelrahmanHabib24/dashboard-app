@@ -8,7 +8,7 @@ const UserSettings = () => {
   const { data: userSession, status } = useSession();
   const { darkMode, toggleDarkMode } = useTheme();
 
-   // useSession( authenticated - loading )
+  // useSession( authenticated - loading )
 
   if (status === "loading") {
     return (
@@ -23,7 +23,10 @@ const UserSettings = () => {
   const user = userSession?.user;
 
   return (
-    <div className="w-full max-w-sm mx-auto p-3 sm:p-4 mt-12 sm:mt-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-md transition-all">
+    <div
+      data-aos="fade-up"
+      className="w-full max-w-sm mx-auto p-3 sm:p-4 mt-12 sm:mt-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-md transition-all"
+    >
       <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800 dark:text-white">
         Profile Settings
       </h1>
