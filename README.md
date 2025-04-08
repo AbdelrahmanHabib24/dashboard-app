@@ -7,7 +7,7 @@ A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind C
 ##  Tech Stack
 
 - **Next.js 15 (App Router)**
-- **React 18**
+- **React 19**
 - **TypeScript**
 - **Tailwind CSS**
 - **Redux Toolkit**
@@ -43,9 +43,13 @@ A **responsive admin dashboard** built with **Next.js**, **React**, **Tailwind C
 
 ##  Getting Started
 
-First, run the development server:
+To run the project in development mode, follow these steps:
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/AbdelrahmanHabib24/dashboard-app
+cd dashboard-app
+# 2. Start the development server
 npm run dev
 # or
 yarn dev
