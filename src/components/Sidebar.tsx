@@ -6,7 +6,7 @@ import { navLinks } from "@/utils/data";
 import { SidebarLinkProps } from "@/utils/type";
 import { FaSignOutAlt } from "react-icons/fa";
 
-// Sidebar link component
+// Sidebar link 
 const SidebarLink = ({ href, icon, label, isSidebarOpen }: SidebarLinkProps) => {
   return (
     <Link
